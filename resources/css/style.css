@@ -1,0 +1,592 @@
+/*orange: #f1c40f*/
+
+/* ----------------------------------------------- */
+/* BASIC SETUP */
+/* ----------------------------------------------- */
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background-color: #fff;
+/*    color: #535353;*/
+    color: #000;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+}
+
+.clearfix {zoom: 1;}
+.clearfix:after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+/* ----------------------------------------------- */
+/* REUSABLE COMPONENTS */
+/* ----------------------------------------------- */
+
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.box {
+    padding: 1%;
+}
+
+.box img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    opacity: 0.95;
+}
+
+section {
+    padding: 80px 0;
+}
+/* ----- HEADINGS ----- */
+
+h1,h2,h3 {
+
+/*    font-weight: 300;*/
+    text-transform: capitalize;
+}
+h1 {
+    font-size: 240%;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+    color: #fff;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 180%;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+    text-align: center;
+    margin-bottom: 25px;
+    
+}
+
+h2:after {
+    display: block;
+    height: 2px;
+    background-color: #f1c40f;
+    content: " ";
+    width: 100px;
+    margin: 30px auto 0 auto;
+}
+
+h3 {
+    font-size: 130%;
+    margin-bottom: 15px;
+}
+
+h4 {
+    font-size: 90%;
+    margin-bottom: 15px;
+    font-weight: 200;
+    text-align: center;
+    
+}
+
+
+/* ----- PARAGRAPHS ----- */
+.intro {
+    line-height: 150%;
+    text-align: center;
+    width: 70%;
+    margin-left: 15%;
+}
+
+.box p {
+    font-size: 90%;
+    line-height: 145%;
+}
+/* ----- ICONS ----- */
+.icon-large {
+    font-size: 350%;
+    display: block;
+    color: #f1c40f;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.icon-small {
+    font-size: 120%;
+    color: #e67e22;
+    display: inline-block;
+    text-align: center;
+    margin-right: 10px;
+    
+/*    methods to align text and icons*/
+    line-height: 120%;
+    vertical-align: middle;
+    margin-top: -5px;
+
+    
+}
+
+/* ----- LINKS ----- */
+
+a:link,
+a:visited {
+    text-decoration: none;
+    color: #e67e22;
+    border-bottom: 1px solid #e67e22;
+    padding-bottom: 1px;
+    -webkit-transition: color 0.2s, border-bottom 0.2s;
+    transition: color 0.2s, border-bottom 0.2s;
+
+}
+
+a:hover,
+a:active {
+    color: #555;
+    border-bottom: 1px solid transparent;
+}
+
+
+/* ----- BUTTONS ----- */
+.btn:link,
+.btn:visited,
+input[type=submit] {
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 300;
+    padding: 10px 50px;
+    border: 1px solid #f1c40f;
+    color: #f1c40f;
+    border-radius: 200px;
+    -webkit-transition: background-color 0.3s, border 0.3s, color 0.3s;
+    transition: background-color 0.3s, border 0.3s, color 0.3s;
+    margin-right: 20px;
+}
+
+.btn-full:link,
+.btn-full:visited,
+input[type=submit] {
+    
+    background-color: #f1c40f;
+    color: #fff;
+}
+
+.btn-unfull:link,
+.btn-unfull:visited {
+    color: #f39c12;
+}
+
+.btn:hover,
+.btn:active,
+input[type=submit]:hover,
+input[type=submit]:active {
+  
+    border: 1px solid #f39c12;
+    background-color: #f39c12;
+
+}
+
+.btn-full:hover,
+.btn-full:active {
+    
+    background-color: #f1c40f;
+}
+
+.btn-unfull:hover,
+.btn-unfull:active {
+    color: #fff;
+}
+
+
+/* ----------------------------------------------- */
+/* HEADER */
+/* ----------------------------------------------- */
+header {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.7))), url(img/headerImg.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url(img/headerImg.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-attachment: fixed;
+}
+
+
+.header-text-box {
+    position: absolute;
+    width: 1140px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.header-text-box a {
+    margin-top: 30px;
+}
+.header-text-box p {
+    
+    font-size: 240%;
+    font-weight: 700;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+    color: #f1c40f;
+    margin-top: 0;
+    margin-bottom: 20px;
+
+    overflow: hidden;
+    width: 30em;
+    animation: type 10s steps(60, end); 
+}
+
+.header-text-box p:nth-child(2){
+  animation: type2 5s steps(60, end);
+}
+
+
+
+.header-text-box p span{
+  animation: blink 1s infinite;
+}
+
+@keyframes type{ 
+  from { width: 0; } 
+} 
+
+@keyframes type2{
+  0%{width: 0;}
+  50%{width: 0;}
+  100%{ width: 100; } 
+} 
+
+@keyframes blink{
+  to{opacity: .0;}
+}
+
+/*
+::selection{
+  background: black;
+}
+*/
+/*
+
+=============================
+*/
+
+
+
+.avatar {
+    height: 100px;
+    width: 100px;
+    float: left;
+    margin-top: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+/*    border: 5px solid rgba(255, 255, 255, 0.5);*/
+    border: 5px solid rgba(155, 89, 182, 0.9);
+}
+
+/* Main navi */
+.main-nav {
+    float: right;
+    list-style: none;
+    margin-top: 80px;
+}
+
+.main-nav li {
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited{
+    text-decoration: none;
+    color: #fff;
+    font-size: 90%;
+    text-transform: capitalize;
+    border-bottom: 2px solid transparent;
+    padding: 8px 0;
+    -webkit-transition: border-bottom 0.3s;
+    transition: border-bottom 0.3s;
+    
+}
+
+
+.main-nav li a:hover,
+.main-nav li a:active{
+    border-bottom: 2px solid #f1c40f;
+    
+}
+
+/* ----------------------------------------------- */
+/* SECTION-FEATURES */
+/* ----------------------------------------------- */
+
+
+
+.section-features h3{
+   text-align: center;
+}
+
+.section-features .intro {
+    margin-bottom: 30px;
+    color: #000;
+    
+}
+
+
+
+.section-features ul {
+    list-style: none;
+    color: #93a4aa;
+    text-align: center;
+    width: 80%;
+    margin-left: 10%;
+
+
+    
+}
+
+.section-features ul li{
+    padding: 5px;
+    line-height: 160%;
+    word-spacing: 4px;
+    font-size: 80%;
+
+    
+    
+}
+
+
+/* ----------------------------------------------- */
+/* SECTION-HOW IT WORKS */
+/* ----------------------------------------------- */
+
+.section-steps {
+    background-color: #eee;
+}
+
+.section-steps p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* ----------------------------------------------- */
+/* SECTION-SHOWCASE */
+/* ----------------------------------------------- */
+
+.section-showcase {
+    padding: 0;
+}
+
+.section-showcase h2 {
+    padding-top: 100px;
+}
+.meals-list {
+    list-style: none;
+    width: 100%;
+    
+}
+.meals-list li {
+    display: block;
+    float: left;
+    width: 25%;
+    
+}
+
+.meals-list li h3 {
+    font-size: 80%;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.meal-pic {
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.meal-pic img {
+    width: 100%;
+    height: auto;
+    opacity: 0.5;
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+    transition: opacity 0.5s, -webkit-transform 0.5s;
+    transition: transform 0.5s, opacity 0.5s;
+    transition: transform 0.5s, opacity 0.5s, -webkit-transform 0.5s;
+}
+
+.meal-pic img:hover {
+
+    opacity: 1;
+    background-color: #000;
+
+    -webkit-transform: scale(1.25);
+    transform: scale(1.25);
+
+}
+
+
+
+
+
+
+
+/* ----------------------------------------------- */
+/* SECTION-LOCATIONS */
+/* ----------------------------------------------- */
+.section-locations {
+    
+}
+.location-feature {
+    margin-bottom: 5px;
+}
+
+
+
+
+
+
+
+/* ----------------------------------------------- */
+/* FORM */
+/* ----------------------------------------------- */
+
+.contact-form {
+    width: 60%;
+    margin: 0 auto;
+}
+
+input[type=text],
+input[type=email],
+select,
+textarea {
+    width: 100%;
+    padding: 7px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+textarea {
+    height: 100px;
+}
+
+input[type=checkbox] {
+    margin: 10px 5px 10px 0;
+}
+
+*:focus {outline: none;}
+
+
+/* ----------------------------------------------- */
+/* FOOTER */
+/* ----------------------------------------------- */
+
+footer {
+    background-color: #333;
+    padding: 50px;
+    font-size: 80%;
+}
+
+.footer-nav {
+    list-style: none;
+    float: left;
+}
+
+.social-links {
+    list-style: none;
+    float: right;
+}
+
+.social-links-up {
+    list-style: none;
+/*    float: right;*/
+}
+
+.footer-nav li,
+.social-links li,
+.social-links-up li{
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.footer-nav li:last-child,
+.social-links li:last-child,
+.social-links-up li:last-child{
+    margin-right: 0;
+}
+
+.footer-nav li a:link,
+.footer-nav li a:visited, 
+.social-links li a:link,
+.social-links li a:visited,
+.social-links-up li a:link,
+.social-links-up li a:visited {
+    text-decoration: none;
+    border: 0;
+    color: #888;
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+}
+
+.footer-nav li a:hover,
+.footer-nav li a:active {
+    color: #ddd;
+}
+
+.social-links li a:link,
+.social-links li a:visited,
+.social-links-up li a:link,
+.social-links-up li a:visited {
+    font-size: 160%;
+}
+
+.ion-social-linkedin,
+.ion-social-github,
+.ion-social-facebook,
+.ion-social-googleplus {
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+}
+
+.ion-social-linkedin:hover {
+    color: #007bb5;
+}
+
+.ion-social-github:hover {
+    color: #000000;
+}
+
+.ion-social-facebook:hover {
+    color: #3b5998;
+}
+
+.ion-social-googleplus:hover {
+    color: #dd4b39;
+}
+
+
+footer p {
+    color: #888;
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+
+
