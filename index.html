@@ -3,6 +3,7 @@
     <head>
         <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
         <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
+        <link rel="stylesheet" type="text/css" href="vendors/css/animate.css">
         <link rel="stylesheet" type="text/css" href="vendors/css/ionicons.css">
         <link rel="stylesheet" type="text/css" href="resources/css/style.css">
         <link rel="stylesheet" type="text/css" href="resources/css/queries.css">
@@ -19,12 +20,13 @@
         <header>
             <nav>
                 <div class="row">
-                    <img class="avatar" src="resources/img/avatar3.jpg" alt="Foodies Logo">
+                    <img class="avatar" src="resources/img/avatar3.jpg" alt="Logo">
+                    <img class="avatar2" src="resources/img/avatar3.jpg" alt="Logo">
                     <ul class="main-nav">
-                        <li><a href="#">my education</a></li>
-                        <li><a href="#">my experience</a></li>
-                        <li><a href="#">personal projects</a></li>
-                        <li><a href="#">contact</a></li>
+                        <li><a href="#education">my education</a></li>
+                        <li><a href="#experience">my experience</a></li>
+                        <li><a href="#projects">personal projects</a></li>
+                        <li><a href="#contact">contact</a></li>
                     </ul>
                 </div>
             </nav>
@@ -39,18 +41,18 @@
                     </ul>
               
 <!--                <a class="btn btn-full" href="#">I’m hungry</a>-->
-<!--                <a class="btn btn-unfull" href="#">Contact Me</a>-->
+                <a class="btn btn-unfull js--scroll-to-education" href="#">Explore more</a>
             </div>
         </header>
         
-        <section class="section-features">
+        <section class="section-features js--section-education" id="education">
             <div class="row">
                 <h2>My education</h2>
                 <p class="intro">I am an enthusiastic girl, looking for an opportunity to use my strong computer professional skills and teamwork skill in providing useful, well-constructed websites and software applications in companies from IT relevant areas. I am interested in learning these skills and would like to work with excellent people.</p>
             
             </div>
             <div class="row">
-                <div class="col span-1-of-2 box">
+                <div class="col span-1-of-2 box js--wp-2">
                     <i class="ion-university icon-large"></i>
                     <h3>Australian National University</h3>
                     <h4>Canberra, ACT, Australia, Feb 2016 – Dec 2017</h4>
@@ -63,7 +65,7 @@
                     </ul>
                 </div>
                 
-                 <div class="col span-1-of-2 box">
+                 <div class="col span-1-of-2 box js--wp-2">
                     <i class="ion-bookmark icon-large"></i>
                     <h3>Chinese Soochow University</h3>
                     <h4>Jiangsu, Soochow, China, Sep 2011 – Jul 2015</h4>
@@ -81,12 +83,12 @@
         </section>
         
        
-        <section class="section-steps">
+        <section class="section-steps" id="experience">
             <div class="row">
                 <h2>Relevant experience</h2>
             </div>
             
-            <div class="row">
+            <div class="row js--wp-1">
                 <div class="col span-1-of-1 box">
                     <ul>
                         <li>
@@ -139,11 +141,11 @@
         
         
         
-         <section class="section-showcase">
+         <section class="section-showcase" id="projects">
             <div class="row">
                 <h2>Projects</h2>
             </div>
-            <ul class="meals-list clearfix">
+            <ul class="meals-list clearfix js--wp-4">
                 <li>
                     <h3>Foodies</h3>
                     <figure class="meal-pic">
@@ -182,7 +184,7 @@
         
 
         
-         <section class="section-form">
+         <section class="section-form" id="contact">
             <div class="row">
                 <h2>Contact Me</h2>
             </div>
@@ -230,10 +232,10 @@
             <div class="row">
                 <div class="col span-1-of-2">
                     <ul class="footer-nav">
-                        <li><a href="#">My education</a></li>
-                        <li><a href="#">My experience</a></li>
-                        <li><a href="#">My projects</a></li>
-                        <li><a href="#">Contact me</a></li>
+                        <li><a href="#education">My education</a></li>
+                        <li><a href="#experience">My experience</a></li>
+                        <li><a href="#projects">My projects</a></li>
+                        <li><a href="#contact">Contact me</a></li>
                     </ul>
                 </div>
                 <div class="col span-1-of-2">
